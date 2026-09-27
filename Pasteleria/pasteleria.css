@@ -1,0 +1,1071 @@
+/* =========================================
+   1. PALETA DE COLORES
+   ========================================= */
+
+:root {
+    --crema: #FFF5E1;
+    --rosa: #FFC0CB;
+    --chocolate: #8B4513;
+    --marron-oscuro: #5D4037;
+    --gris-claro: #B0BEC5;
+    --blanco: #FFFFFF;
+}
+
+
+/* =========================================
+   2. ESTILOS GENERALES
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--marron-oscuro);
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   3. HEADER
+   ========================================= */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background-color: var(--rosa);
+    color: var(--marron-oscuro);
+}
+
+#header h1,
+#header h2 {
+    color: var(--chocolate);
+    font-size: 32px;
+}
+
+#header .contact {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   4. NAVBAR
+   ========================================= */
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+
+    background-color: transparent;
+
+    border-bottom: 3px solid var(--rosa);
+}
+
+
+/* LOGO */
+
+#navbar .logo h4 {
+    color: var(--chocolate);
+    font-size: 24px;
+}
+
+
+/* ENLACES */
+
+#navbar .links {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+#navbar .links a {
+    color: var(--marron-oscuro);
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+#navbar .links a:hover {
+    color: var(--chocolate);
+}
+
+
+/* =========================================
+   5. BOTONES GENERALES
+   ========================================= */
+
+.btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    background-color: var(--chocolate);
+    color: var(--blanco);
+
+    border: none;
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--rosa);
+    color: var(--marron-oscuro);
+}
+
+
+/* =========================================
+   6. HERO - INDEX
+   ========================================= */
+
+#hero {
+    width: 100%;
+    min-height: 450px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 50px 40px;
+
+    background-color: var(--crema);
+}
+
+
+/* TEXTO HERO */
+
+.hero-texto {
+    width: 50%;
+    max-width: 600px;
+
+    text-align: left;
+}
+
+.hero-texto span {
+    display: block;
+
+    color: var(--chocolate);
+
+    font-size: 48px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.hero-texto p {
+    color: var(--marron-oscuro);
+
+    font-size: 20px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* BOTÓN HERO */
+
+.hero-texto .btn {
+    display: block;
+
+    width: fit-content;
+
+    margin: 25px auto 0 auto;
+}
+
+
+/* IMAGEN HERO */
+
+.FotoMain {
+    width: 400px;
+    max-width: 40%;
+
+    height: auto;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   7. PRODUCTOS
+   ========================================= */
+
+.productos {
+    width: 100%;
+
+    padding: 60px 40px;
+
+    background-color: var(--crema);
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.productos .titulo-principal {
+    color: var(--chocolate);
+
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+/* CATEGORÍAS */
+
+.categoria-productos {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 70px auto;
+}
+
+.categoria-productos h2 {
+    color: var(--chocolate);
+
+    font-size: 30px;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* CONTENEDOR PRODUCTOS */
+
+.productos-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   8. TARJETA DE PRODUCTO
+   ========================================= */
+
+.producto {
+    width: 220px;
+
+    padding: 15px;
+
+    background-color: var(--blanco);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 10px rgba(93, 64, 55, 0.15);
+
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 18px rgba(93, 64, 55, 0.25);
+}
+
+
+/* IMAGEN */
+
+.producto img {
+    width: 100%;
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* NOMBRE */
+
+.producto h3 {
+    color: var(--chocolate);
+
+    font-size: 18px;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+/* CÓDIGO */
+
+.producto .codigo {
+    display: block;
+
+    color: var(--gris-claro);
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+/* PRECIO */
+
+.producto .precio {
+    display: block;
+
+    color: var(--marron-oscuro);
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   9. NOSOTROS
+   ========================================= */
+
+.nosotros {
+    width: 100%;
+
+    padding: 60px 40px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.titulo-principal {
+    color: var(--chocolate);
+
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+/* CONTENEDOR GENERAL */
+
+.info {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* SECCIÓN TEXTO + IMAGEN */
+
+.nosotros-contenido {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+
+    margin-bottom: 50px;
+}
+
+
+/* TEXTO */
+
+.nosotros-texto {
+    flex: 1;
+
+    text-align: left;
+}
+
+.nosotros-texto h2 {
+    color: var(--chocolate);
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.nosotros-texto h3 {
+    color: var(--chocolate);
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.nosotros-texto p {
+    max-width: 700px;
+
+    color: var(--marron-oscuro);
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* IMAGEN NOSOTROS */
+
+.FotoNosotros {
+    width: 300px;
+    max-width: 35%;
+
+    height: auto;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* TÍTULOS ENTRE SECCIONES */
+
+.titulo-seccion {
+    color: var(--chocolate);
+
+    font-size: 32px;
+
+    text-align: center;
+
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   10. CONTACTO
+   ========================================= */
+
+.contacto {
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.contacto h2 {
+    color: var(--chocolate);
+
+    margin-bottom: 30px;
+}
+
+
+/* FORMULARIO */
+
+.contacto form {
+    width: 100%;
+    max-width: 500px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* CAMPOS */
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--gris-claro);
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    outline: none;
+
+    border-color: var(--rosa);
+}
+
+
+/* =========================================
+   11. CARRITO
+   ========================================= */
+
+.carrito-pagina {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    /*
+       El carrito utiliza la altura visible
+       de la pantalla menos el espacio del header.
+    */
+    height: calc(100vh - 150px);
+
+    /*
+       Evita que el carrito completo
+       genere una barra de desplazamiento.
+    */
+    overflow: hidden;
+}
+
+
+/* TÍTULO MI CARRITO */
+
+.carrito-pagina > h1 {
+    color: var(--chocolate);
+
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   12. CONTENEDOR PRINCIPAL DEL CARRITO
+   ========================================= */
+
+.carrito-contenedor {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 40px;
+
+    /*
+       Utiliza el espacio restante
+       debajo del título.
+    */
+    height: calc(100% - 80px);
+}
+
+
+/* =========================================
+   13. LISTA DEL CARRITO
+   ========================================= */
+
+.lista-carrito {
+    flex: 1;
+
+    height: 100%;
+
+    background-color: var(--blanco);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(93, 64, 55, 0.15);
+
+    /*
+       La lista permanece fija.
+       Solo los productos tendrán scroll.
+    */
+    overflow: hidden;
+}
+
+.lista-carrito h2 {
+    color: var(--chocolate);
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   14. ZONA CON SCROLL DEL CARRITO
+   ========================================= */
+
+#productos-carrito {
+    height: calc(100% - 60px);
+
+    /*
+       Esta es la parte que se puede
+       recorrer con la rueda del mouse.
+    */
+    overflow-y: auto;
+
+    padding-right: 10px;
+}
+
+
+/* =========================================
+   15. PRODUCTO DENTRO DEL CARRITO
+   ========================================= */
+
+.producto-carrito {
+    width: 100%;
+
+    display: flex;
+
+    /*
+       La información queda a la izquierda
+       y la imagen a la derecha.
+    */
+    flex-direction: row-reverse;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--rosa);
+}
+
+
+/* IMAGEN DEL PRODUCTO */
+
+.imagen-carrito {
+    width: 180px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* INFORMACIÓN */
+
+.info-carrito {
+    flex: 1;
+
+    text-align: left;
+}
+
+.info-carrito h3 {
+    color: var(--chocolate);
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.info-carrito p {
+    color: var(--marron-oscuro);
+
+    margin: 5px 0;
+}
+
+
+/* =========================================
+   16. CANTIDAD DEL PRODUCTO
+   ========================================= */
+
+.cantidad-producto {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 15px 0;
+}
+
+.cantidad-producto span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* BOTONES + Y - */
+
+.btn-cantidad {
+    width: 35px;
+    height: 35px;
+
+    background-color: var(--chocolate);
+    color: var(--blanco);
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-cantidad:hover {
+    background-color: var(--rosa);
+    color: var(--marron-oscuro);
+}
+
+
+/* =========================================
+   17. SUBTOTAL
+   ========================================= */
+
+.info-carrito .subtotal {
+    color: var(--chocolate);
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   18. BOTÓN ELIMINAR
+   ========================================= */
+
+.btn-eliminar {
+    margin-top: 10px;
+
+    padding: 10px 20px;
+
+    background-color: var(--chocolate);
+    color: var(--blanco);
+
+    border: none;
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+    background-color: var(--rosa);
+    color: var(--marron-oscuro);
+}
+
+
+/* =========================================
+   19. RESUMEN DEL CARRITO
+   ========================================= */
+
+.resumen-carrito {
+    width: 300px;
+
+    background-color: var(--blanco);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(93, 64, 55, 0.15);
+
+    text-align: center;
+
+    /*
+       Evita que Flexbox achique
+       la tarjeta del resumen.
+    */
+    flex-shrink: 0;
+}
+
+.resumen-carrito h2 {
+    color: var(--chocolate);
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+}
+
+.resumen-carrito p {
+    color: var(--marron-oscuro);
+
+    margin-bottom: 10px;
+}
+
+
+/* TOTAL */
+
+#total-carrito {
+    display: block;
+
+    color: var(--chocolate);
+
+    font-size: 32px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   20. FOOTER
+   ========================================= */
+
+footer {
+    background-color: var(--chocolate);
+    color: var(--crema);
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--rosa);
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.texto-secundario {
+    color: var(--gris-claro);
+}
+
+
+/* =========================================
+   21. RESPONSIVE
+   CELULARES Y TABLETS
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================
+       HEADER
+       ===================================== */
+
+    #header {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       NAVBAR
+       ===================================== */
+
+    #navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    #navbar .links {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    /* =====================================
+       HERO
+       ===================================== */
+
+    #hero {
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding: 40px 20px;
+    }
+
+    .hero-texto {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .hero-texto span {
+        font-size: 36px;
+    }
+
+    .FotoMain {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* =====================================
+       PRODUCTOS
+       ===================================== */
+
+    .productos {
+        padding: 40px 20px;
+    }
+
+    .productos-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    /* =====================================
+       NOSOTROS
+       ===================================== */
+
+    .nosotros {
+        padding: 40px 20px;
+    }
+
+    .nosotros-contenido {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .nosotros-texto {
+        text-align: center;
+    }
+
+    .FotoNosotros {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+    /* =====================================
+       CARRITO
+       ===================================== */
+
+    .carrito-pagina {
+        /*
+           En celular permitimos que la
+           página recupere su altura normal.
+        */
+        height: auto;
+
+        padding: 40px 20px;
+
+        overflow: visible;
+    }
+
+
+    .carrito-contenedor {
+        /*
+           Productos arriba.
+           Resumen abajo.
+        */
+        flex-direction: column;
+
+        height: auto;
+    }
+
+
+    /* LISTA */
+
+    .lista-carrito {
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    /*
+       En celular mantenemos una altura
+       máxima para seguir permitiendo
+       scroll dentro de los productos.
+    */
+
+    #productos-carrito {
+        height: auto;
+
+        max-height: 600px;
+
+        overflow-y: auto;
+    }
+
+
+    /* PRODUCTO */
+
+    .producto-carrito {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    /* IMAGEN */
+
+    .imagen-carrito {
+        width: 100%;
+        max-width: 250px;
+
+        height: 180px;
+    }
+
+
+    /* INFORMACIÓN */
+
+    .info-carrito {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* BOTONES CANTIDAD */
+
+    .cantidad-producto {
+        justify-content: center;
+    }
+
+
+    /* RESUMEN */
+
+    .resumen-carrito {
+        width: 100%;
+    }
+}
